@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "4e0cb0b0-459a-46df-93ce-fc5e83cdc433",
+		"name": "library API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27192221",
+		"_collection_link": "https://www.postman.com/gold-satellite-474217/workspace/myworkspace/collection/27192221-4e0cb0b0-459a-46df-93ce-fc5e83cdc433?action=share&source=collection_link&creator=27192221"
+	},
+	"item": [
+		{
+			"name": "AddBook",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\r\n\"name\":\"Learn Appium Automation with Java\",\r\n\"isbn\":\"bcd\",\r\n\"aisle\":\"227\",\r\n\"author\":\"John foe\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://216.10.245.166/Library/Addbook.php",
+					"protocol": "http",
+					"host": [
+						"216",
+						"10",
+						"245",
+						"166"
+					],
+					"path": [
+						"Library",
+						"Addbook.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchByBookName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://216.10.245.166/Library/GetBook.php?AuthorName=tarek",
+					"protocol": "http",
+					"host": [
+						"216",
+						"10",
+						"245",
+						"166"
+					],
+					"path": [
+						"Library",
+						"GetBook.php"
+					],
+					"query": [
+						{
+							"key": "AuthorName",
+							"value": "tarek"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search for book ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://216.10.245.166/Library/GetBook.php?ID=ccc121",
+					"protocol": "http",
+					"host": [
+						"216",
+						"10",
+						"245",
+						"166"
+					],
+					"path": [
+						"Library",
+						"GetBook.php"
+					],
+					"query": [
+						{
+							"key": "ID",
+							"value": "ccc121"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ID\": \"bcd227\"}\r\n"
+				},
+				"url": {
+					"raw": "http://216.10.245.166/Library/DeleteBook.php",
+					"protocol": "http",
+					"host": [
+						"216",
+						"10",
+						"245",
+						"166"
+					],
+					"path": [
+						"Library",
+						"DeleteBook.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
